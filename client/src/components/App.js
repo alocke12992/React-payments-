@@ -9,6 +9,7 @@ import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
 import { Switch, Route } from 'react-router-dom';
+import PaymentSuccess from './PaymentSuccess';
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
             <Route exact path='/' component={Home} />
             <AuthRoute exact path='/login' component={Login} />
             <AuthRoute exact path='/register' component={Register} />
+            <Route exact path='/payment_success' component={PaymentSuccess} />
             <Route component={NoMatch} />
           </Switch>
         </FetchUser>
